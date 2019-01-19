@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+		
+		class user{
+			fname;
+			lname;
+			gender
+			constructor(fname, lname, gender){
+				this.fname = fname;
+				this.lname = lname;
+				this.gender = gender;
+			}		
+		}
+		var obj = new user('perla', 'mah', 'sdf');
+		
+		*/
+
+
+		function User(fname, lname, gender){
+			this.fname = fname; // property
+			this.lname = lname;
+			this.gender = gender;
+			this.callMe = function(){
+				console.log('callMe invoked');
+			}
+		}
+		User.prototype.age = 23; // add a property
+		User.prototype = new User(); // adding a constructor
+
+		var ramya = new User('ramya','p', 'f');
+		ramya.age = 35;
+		console.log(ramya);
+
+		var mahesh = new User('mahesh','p', 'm');
+		mahesh.age = 44;
+		console.log(mahesh);
+		mahesh.callMe();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

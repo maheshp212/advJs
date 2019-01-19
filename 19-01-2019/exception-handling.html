@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//console.log(user[0].mahesh);
+		try{
+			console.log('try');
+			throw('hello'); //-- user defined exception
+			//console.log(user[0].mahesh);  //--  predefined exception
+			var a = 2/0;
+		} catch (e) {
+			console.log('catch');
+			console.log(e);
+		} finally { // executes even exception comes or not 
+			console.log('this is finally');
+		}
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

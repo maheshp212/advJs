@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var a = 2;
+
+		function callMe(){
+			a = 10
+			var b = 3
+		} 
+		callMe();
+		console.log(a); // 10
+		//console.log(b); // not-defined
+
+		console.log(c); // undefined -- hositing
+		//console.log(d); // not defined
+		var c = 2;
+		d = 3; // this is removed in ES6
+
+		function callMe2(){
+			console.log(e); // undefined
+			var e = 'e';
+		}
+		callMe2();
+
+		callMe3(); // hoisting -- it prints f
+		function callMe3(){
+			var f = 'f';
+			console.log(f);
+		}
+
+		//callMe4(); // error
+		console.log(callMe4) // undefined
+		var callMe4 = function(){
+			var g = 'g';
+			console.log(g);	
+		}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

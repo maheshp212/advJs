@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+			session**
+			cookie // system restart
+			localstorage // life time
+			sessionstorage // browser close
+		*/
+
+		document.cookie = "fname=hello";//add
+		var x = document.cookie //read
+		console.log(document.cookie);
+		document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; //delete
+
+		localStorage.setItem("lname", "Smith");//add
+		var y = localStorage.getItem('lname'); //read
+		console.log(y);
+		localStorage.removeItem('lname'); //delete
+
+		sessionStorage.setItem("gname", "RUpa"); //add
+		var z = sessionStorage.getItem("gname"); //read
+		console.log(z);
+		sessionStorage.removeItem("gname"); //delete
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
