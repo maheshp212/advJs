@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+
+
+
+
+
+
+		(function(){
+					console.log('hello');
+		}) ();
+
+		(function(a,b){
+					console.log(a*b);
+					this.c = a;
+		}) (2,3);
+
+		//arrow functions
+		//lambda expression
+		var c = ()=>{
+			console. log('arrow function');
+			this.cer = 3;
+		}
+		c();
+		///business logic in arrow
+		var c1 = function(_this){
+			console. log('arrow function');
+			_this.cer = 3
+		}
+		var _this = this;
+		c1(_this);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
