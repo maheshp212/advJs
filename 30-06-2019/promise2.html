@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		let promise1 = new Promise(function(resolve, reject) {
+		  setTimeout(() => resolve(4), 3000);
+		});
+
+		let promise2 = new Promise(function(resolve, reject) {
+
+			promise1.then((res)=>{
+				console.log('promise1 resolved')
+		  		setTimeout(() => resolve(res*5), 3000);
+			}, ()=>{
+				
+			})
+		});
+
+		promise2.then(function(res){
+			console.log('promise2 resolved')	
+			console.log(res); // 20
+		},function(x){
+
+		})
+
+
+		console.log('post pormise')
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

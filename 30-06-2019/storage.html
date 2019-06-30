@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+			cache (3rd party tools pagespeedmod, redis)
+
+			application variables // 2MB				
+			
+			sessions // server side 
+
+			cookies //restart the system it will expire 2KB
+			localstorage // it will never expire 5MB - expandable upto 10MB
+			session storage // if we lost the connection it will expire  5MB - expandable upto 10MB
+		*/
+
+			document.cookie = "username=John Doe";
+			console.log(document.cookie);
+
+
+		var obj = {
+			name: 'qshore',
+			age: 45,
+			pwd : 'hello',
+			email: 'asdf@asdf.com',
+			phone: '234234234234',
+		};
+		localStorage.setItem('user', JSON.stringify(obj));
+		let item = localStorage.getItem('user');
+		console.log(item);
+		console.log(JSON.parse(item));
+		localStorage.removeItem('user');
+
+
+		var obj = {
+			name: 'qshore22222222222',
+			age: 45,
+			pwd : 'hello',
+			email: 'asdf@asdf.com',
+			phone: '234234234234',
+		};
+		sessionStorage.setItem('user', JSON.stringify(obj));
+		let sitem = sessionStorage.getItem('user');
+		console.log(sitem);
+		console.log(JSON.parse(sitem));
+		sessionStorage.removeItem('user');
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

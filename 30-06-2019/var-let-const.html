@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+		/* scopes
+			- global
+			- block
+			- function
+		*/
+
+		var v1 = 'v1'; // global and funciton
+		let l1 = 'l1'; // global and block
+		const c1 = 'c1'; // global and block
+
+		console.log(v1);
+		console.log(l1);
+		console.log(c1);
+
+		if(true){
+			var v2 = 'v2';
+			let l2 = 'l2';
+			const c2 = 'c2';
+			console.log(v2);
+			console.log(l2);
+			console.log(c2);
+		}
+
+		function callMe(){
+			var v3 = 'v3';
+			let l3 = 'l3';
+			const c3 = 'c3';
+			console.log(v3);
+			console.log(l3);
+			console.log(c3);
+		}
+		callMe();
+
+
+		console.log(v1);
+		console.log(l1);
+		console.log(c1);
+
+		console.log(v2);
+		//console.log(l2);
+		//console.log(c2);
+		
+		//console.log(v3);
+		//console.log(l3);
+		//console.log(c3);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

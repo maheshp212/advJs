@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		let promiseVar = new Promise(function(resolve, reject) {
+		  // the function is executed automatically when the promise is constructed
+
+		  // after 1 second signal that the job is done with the result "done"
+		  if(true){
+
+		  setTimeout(() => resolve({jo: "done"}), 3000);
+		  } else {
+		  reject('canceled')
+		  	
+		  }
+
+		});
+
+		promiseVar.then(function(res){
+			
+			console.log(res.jo);
+		},function(x){
+
+		})
+
+
+		console.log('post pormise')
+
+		// fetch('http://api.qshore.com/users')
+		// .then(response => response.json())
+		// .then(data => {
+		//   console.log(data) // Prints result from `response.json()` in getRequest
+		// })
+		// .finally(()=>{console.log('asdfasdasdf')})
+		// .catch(error => console.error(error))
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

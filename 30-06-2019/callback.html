@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		
+		function eventListener(inp, callback){
+			var c = inp*5;
+			callback(c);
+		} 
+		eventListener(4, function(x){
+			console.log(x);
+		});
+
+
+		function mul(inp, callbackMultiply){
+			var a = inp + 5;
+			var mulRes = callbackMultiply(inp, a)
+			return inp*mulRes
+		}
+
+		var x = function(a, b){
+			return a*b;
+		}
+		
+		var res = mul(5, x)
+		
+		console.log(res);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// var counter = 0;
+		// function add() {
+		//   counter += 1;
+		// }
+		// add();
+		// add();
+		// add();
+
+
+
+
+// function add() {
+//   var counter = 0; 
+//   counter += 1;
+//   return counter;
+// }
+// add();
+// add();
+// add();
+
+
+var add = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+console.log(add);
+add();
+add();
+var c = add();
+console.log(c);
+
+console.log( `the output of the fucntion is ${c}`)
+
+
+// ES5 vs ES6
+// Class
+// Interface
+// Inheritance
+// var let const
+// block scope
+// arrow functions
+// require
+// template Literals
+	</script>
+</head>
+<body>
+
+</body>
+</html>

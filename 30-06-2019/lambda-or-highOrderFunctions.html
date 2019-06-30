@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function myFunction(a, callBack, callBackParams){
+			var c = callBack(); //6
+			var d = a +c; // 9
+			var e = callBackParams(c, d); //54
+			d += e; //63
+			return function(){
+				return a+d; //66
+			};
+		}
+		var c1 = function(){return 6}
+		var c2 = function(a,b){return a*b;}
+		var res2 = myFunction(3, c1, c2);
+		console.log(res2);
+
+		var res3 =res2();
+		console.log(res3); // 66
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
