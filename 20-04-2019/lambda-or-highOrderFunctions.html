@@ -14,20 +14,25 @@
 	<title></title>
 	<script type="text/javascript">
 		function myFunction(a, callBack, callBackParams){
-			var c = callBack();
-			var d = a +c;
-			var e = callBackParams(c, d);
-			d += e;
-			return function(){
+			var c = callBack();//6
+			var d = a +c; //9
+			var e = callBackParams(c, d);//54
+			d += e;//63
+			var f = function(){
 				return a+d;
-			};
+			} 
+
+			function g(){
+				return a+d;
+			}
+			return g;
 		}
 		var c1 = function(){return 6}
 		var c2 = function(a,b){return a*b;}
 		var res2 = myFunction(3, c1, c2);
 		console.log(res2);
 
-		var res3 =res2();
+		var res3 =res2();//66
 		console.log(res3);
 
 	</script>
